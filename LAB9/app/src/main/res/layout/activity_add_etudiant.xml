@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Card formulaire -->
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="16dp"
+            card_view:cardElevation="8dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nouveau étudiant"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- Nom -->
+                <TextView style="@style/text" android:text="👤  Nom" />
+                <EditText
+                    android:id="@+id/nom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Entrez le nom"
+                    android:inputType="textPersonName"
+                    android:padding="12dp"
+                    android:background="@drawable/input_bg"
+                    android:layout_marginBottom="16dp"
+                    android:autofillHints="name" />
+
+                <!-- Prénom -->
+                <TextView style="@style/text" android:text="👤  Prénom" />
+                <EditText
+                    android:id="@+id/prenom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Entrez le prénom"
+                    android:inputType="textPersonName"
+                    android:padding="12dp"
+                    android:background="@drawable/input_bg"
+                    android:layout_marginBottom="16dp"
+                    android:autofillHints="name" />
+
+                <!-- Ville -->
+                <TextView style="@style/text" android:text="🏙️  Ville" />
+                <Spinner
+                    android:id="@+id/ville"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/villes"
+                    android:padding="12dp"
+                    android:background="@drawable/input_bg"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Sexe -->
+                <TextView style="@style/text" android:text="⚥  Sexe" />
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <RadioButton
+                        android:id="@+id/m"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Homme"
+                        android:textColor="@color/text_primary"
+                        android:checked="true"
+                        android:layout_marginEnd="24dp" />
+
+                    <RadioButton
+                        android:id="@+id/f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Femme"
+                        android:textColor="@color/text_primary" />
+                </RadioGroup>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Bouton Ajouter -->
+        <Button
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="✅  Ajouter l'étudiant"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/primary" />
+
+        <!-- Message d'erreur -->
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error"
+            android:textSize="13sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

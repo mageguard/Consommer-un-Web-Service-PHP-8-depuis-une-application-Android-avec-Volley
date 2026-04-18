@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/primary"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎓"
+            android:textSize="48sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gestion Étudiants"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gérez vos étudiants facilement"
+            android:textColor="#C5CAE9"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Boutons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnGoToAdd"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="➕  Ajouter un étudiant"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/primary"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnGoToList"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📋  Voir la liste"
+            android:textSize="16sp"
+            android:textColor="@color/primary"
+            android:backgroundTint="#E8EAF6"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</LinearLayout>
